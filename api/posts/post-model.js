@@ -34,6 +34,7 @@ async function create(post) {
   //   )
   const [id] = await db('posts').insert(post)
   const newlyCreatedPost = await getById(id)
+  // further js processing here
   return newlyCreatedPost
 }
 
