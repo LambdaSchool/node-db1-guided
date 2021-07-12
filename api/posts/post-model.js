@@ -27,7 +27,7 @@ async function getById(id) {
 }
 
 async function create({ title, contents }) {
-  // const newlyCreatedPost = await db('posts')
+  // const newlyCreatedPost = await db('posts') // ONLY POSTGRES
   //   .insert(
   //     { title, contents },
   //     ['id', 'title', 'contents', 'created_at', 'updated_at']
