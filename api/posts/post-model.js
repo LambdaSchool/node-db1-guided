@@ -48,8 +48,7 @@ async function update(id, { title, contents }) {
 }
 
 async function remove(id) {
-  const removed = await db('posts')
+  const numOfRemovedRecords = await db('posts')
     .where('id', id)
     .del()
-  return removed
 }
