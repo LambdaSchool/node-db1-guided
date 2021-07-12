@@ -40,7 +40,7 @@ async function create(post) {
 
 async function update(id, { title, contents }) {
   console.log(id, { title, contents })
-  await db('posts')
+  const numOfUpdatedRecords = await db('posts')
     .where('id', id)
     .update({ title, contents })
   const updatedPost = await getById(id)
