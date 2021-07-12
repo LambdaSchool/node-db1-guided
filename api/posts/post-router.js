@@ -27,7 +27,7 @@ router.get('/:id', checkId, async (req, res, next) => {
     res.json(data)
   } catch (err) {
     console.log(err.message)
-    // next(err)
+    next(err)
   }
 })
 
