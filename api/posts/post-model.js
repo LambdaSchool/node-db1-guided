@@ -22,7 +22,6 @@ async function getById(id) {
   //   SELECT * FROM posts WHERE id = ?;
   // `, [id])
   const records = await db('postz').where('id', id)
-  console.log(records)
   return records
 }
 

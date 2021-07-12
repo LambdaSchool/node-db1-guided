@@ -23,8 +23,10 @@ router.get('/', async (req, res, next) => {
 router.get('/:id', checkId, async (req, res, next) => {
   try {
     const data = await Post.getById(req.params.id)
+    console.log(data)
     res.json(data)
   } catch (err) {
+    console.log(err.message)
     // next(err)
   }
 })
