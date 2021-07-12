@@ -1,4 +1,4 @@
-const knex
+const db = require('../../data/db-config')
 
 module.exports = {
   get,
@@ -10,6 +10,7 @@ module.exports = {
 
 async function get() {
   // SELECT * FROM posts;
+  db.raw('SELECT * FROM posts;')
 }
 
 async function getById() {
