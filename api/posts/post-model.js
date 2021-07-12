@@ -47,6 +47,6 @@ async function update(id, { title, contents }) {
   return updatedPost
 }
 
-async function remove() {
+async function remove(id) {
   return 'delete wired'
 }
