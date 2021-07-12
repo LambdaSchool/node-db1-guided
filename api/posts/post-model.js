@@ -26,7 +26,8 @@ async function getById(id) {
   return record
 }
 
-async function create() {
+async function create({ title, contents }) {
+  console.log({ title, contents })
   return 'create wired'
 }
 
