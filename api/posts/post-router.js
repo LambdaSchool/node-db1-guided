@@ -25,7 +25,7 @@ router.get('/:id', checkId, async (req, res, next) => {
     const data = await Post.getById(req.params.id)
     res.json(data)
   } catch (err) {
-    next(err)
+    // next(err)
   }
 })
 
