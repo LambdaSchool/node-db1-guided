@@ -40,7 +40,9 @@ async function create(post) {
 
 async function update(id, { title, contents }) {
   console.log(id, { title, contents })
-  return 'update wired'
+  const stuff = await db('posts')
+    .where('id', id)
+    .update()
 }
 
 async function remove() {
