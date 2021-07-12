@@ -42,7 +42,8 @@ async function update(id, { title, contents }) {
   console.log(id, { title, contents })
   const stuff = await db('posts')
     .where('id', id)
-    .update()
+    .update({ title, contents })
+  return stuff
 }
 
 async function remove() {
