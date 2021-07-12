@@ -17,8 +17,8 @@ async function get() {
   return records
 }
 
-async function getById() {
-  return 'getById wired'
+async function getById(id) {
+  const records = await db.raw(``)
 }
 
 async function create() {
