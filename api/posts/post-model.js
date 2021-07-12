@@ -48,5 +48,8 @@ async function update(id, { title, contents }) {
 }
 
 async function remove(id) {
-  return 'delete wired'
+  const removed = await db('posts')
+    .where('id', id)
+    .del()
+  return removed
 }
