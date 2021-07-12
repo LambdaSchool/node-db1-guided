@@ -26,13 +26,13 @@ async function getById(id) {
   return record
 }
 
-async function create({ title, contents }) {
+async function create(post) {
   // const newlyCreatedPost = await db('posts') // ONLY POSTGRES
   //   .insert(
   //     { title, contents },
   //     ['id', 'title', 'contents', 'created_at', 'updated_at']
   //   )
-  const [id] = await db('posts').insert({ title, contents })
+  const [id] = await db('posts').insert(post)
   const newlyCreatedPost = await getById(id)
   return newlyCreatedPost
 }
