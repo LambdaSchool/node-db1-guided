@@ -1,3 +1,5 @@
+const knex
+
 module.exports = {
   get,
   getById,
@@ -7,7 +9,7 @@ module.exports = {
 }
 
 async function get() {
-  // ?
+  // SELECT * FROM posts;
 }
 
 async function getById() {
