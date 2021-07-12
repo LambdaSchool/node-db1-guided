@@ -13,6 +13,7 @@ async function get() {
   // const records = await db.raw('SELECT * FROM posts;')
   // const records = await db.select().from('posts')
   const records = await db('posts')
+  console.log(records)
   return records
 }
 
