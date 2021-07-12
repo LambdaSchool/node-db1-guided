@@ -36,6 +36,7 @@ router.post('/', checkPayload, async (req, res, next) => {
     const data = await Post.create(req.body)
     res.json(data)
   } catch (err) {
+    console.log(err.message)
     next(err)
   }
 })
