@@ -39,6 +39,7 @@ async function create(post) {
 }
 
 async function update(id, { title, contents }) {
+  console.log(id, { title, contents })
   return 'update wired'
 }
 
