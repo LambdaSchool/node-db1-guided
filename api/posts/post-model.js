@@ -19,8 +19,8 @@ async function get() {
 
 async function getById(id) {
   const records = await db.raw(`
-    SELECT * FROM posts WHERE id = ${id};
-  `)
+    SELECT * FROM posts WHERE id = ??;
+  `, [id])
   console.log(records)
   return records
 }
