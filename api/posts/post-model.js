@@ -21,8 +21,8 @@ async function getById(id) {
   // const records = await db.raw(`
   //   SELECT * FROM posts WHERE id = ?;
   // `, [id])
-  const records = await db('postz').where('id', id)
-  return records
+  const [record] = await db('posts').where('id', id)
+  return record
 }
 
 async function create() {
