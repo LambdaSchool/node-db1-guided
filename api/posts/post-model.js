@@ -10,8 +10,9 @@ module.exports = {
 
 async function get() {
   // SELECT * FROM posts;
-  const rows = await db.raw('SELECT * FROM posts;')
-  return rows
+  // const records = await db.raw('SELECT * FROM posts;')
+  const records = await db('posts')
+  return records
 }
 
 async function getById() {
