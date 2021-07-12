@@ -38,7 +38,7 @@ async function create(post) {
   return newlyCreatedPost
 }
 
-async function update() {
+async function update(id, post) {
   return 'update wired'
 }
 
