@@ -40,10 +40,10 @@ async function create(post) {
 
 async function update(id, { title, contents }) {
   console.log(id, { title, contents })
-  const stuff = await db('posts')
+  const numOfUpdatedRecords = await db('posts')
     .where('id', id)
     .update({ title, contents })
-  return stuff
+  return numOfUpdatedRecords
 }
 
 async function remove() {
